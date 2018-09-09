@@ -1,0 +1,19 @@
+# Python
+.py[cod]
+.npy
+.ipynb_checkpoints
+
+# Matlab
+.m[~]
+.mat
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
