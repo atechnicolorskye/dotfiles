@@ -22,7 +22,7 @@ if [ -f ~/bin/sensible.bash ]; then
 fi
 
 # bash-powerline
-source ~/bin/.bash-powerline.sh
+source ~/dotfiles/bin/.bash-powerline.sh
 
 # enable forward search
 [[ $- == *i* ]] && stty -ixon
