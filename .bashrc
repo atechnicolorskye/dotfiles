@@ -12,9 +12,12 @@ fi
 # coreutils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-# python
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/Users/sky/Library/Python/3.6/bini:$PATH"
+# python, use pyenv
+ export PYENV_ROOT="$HOME/.pyenv"
+ export PATH="$PYENV_ROOT/bin:$PATH"
+ if command -v pyenv 1>/dev/null 2>&1; then
+   eval "$(pyenv init -)"
+ fi
 
 # sensible bash
 if [ -f ~/bin/sensible.bash ]; then
