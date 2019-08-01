@@ -8,12 +8,11 @@
 .mat
 
 # OS
+._*
+.db
 .DS_Store
 .DS_Store?
-._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
 Icon?
-Thumbs.db
 
