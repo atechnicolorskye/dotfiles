@@ -3,6 +3,7 @@ alias aria_d="aria2c --file-allocation=none -c -x 16 -s 16 -d ~/Downloads"
 alias ll="ls -al"
 alias o="open ."
 alias src="source ~/.bashrc"
+alias up="brew cask upgrade --greedy"
 
 # bash_completion
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
