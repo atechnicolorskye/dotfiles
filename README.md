@@ -6,8 +6,9 @@ Run in the following order:
 - Install awesome vimrc  
 `./.vim_runtime/install_awesome_vimrc.sh`
 - Switch to latest bash  
+Paste /usr/local/bin/bash >> /etc/shells, then
+
 ```
-sudo -s echo /usr/local/bin/bash >> /etc/shells 
 chsh -s /usr/local/bin/bash
 ```
 - Cleanup  
