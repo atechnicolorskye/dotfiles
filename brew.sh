@@ -27,11 +27,6 @@ packages=(
     wget
 )
 
-# Install packages
-echo "Installing packages..."
-
-brew install ${packages[@]}
-
 # Apps
 apps=(
     alfred
@@ -70,6 +65,12 @@ echo "Installing apps..."
 
 brew cask install --appdir="/Applications" ${apps[@]}
 
+# Install packages
+echo "Installing packages..."
+
+brew install ${packages[@]}
+
+# Install fonts
 brew cask install font-hack font-ibm-plex font-input
 
 brew doctor
@@ -91,8 +92,7 @@ python=(
     torchvision
 )
 
-echo "General Python packages"
+echo "Packages to be installed:"
 echo ${python[@]}
 
 pyenv
-
