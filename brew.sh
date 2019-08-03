@@ -23,7 +23,6 @@ packages=(
     the_silver_searcher
     tmux
     tree
-    vim
     wget
 )
 
