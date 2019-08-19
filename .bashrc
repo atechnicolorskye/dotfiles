@@ -1,7 +1,7 @@
 # aliases
 alias aria="aria2c --file-allocation=none -c -x 16 -s 16 -d ~/Downloads"
 alias arte="./dotfiles/arte-downloader/arte_downloader.sh"
-alias ll="ls -al"
+lias ll="ls -al"
 alias o="open ."
 alias src="source ~/.bashrc"
 alias up="brew cask upgrade --greedy"

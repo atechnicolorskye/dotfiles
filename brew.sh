@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 # Update, upgrade and cleanup
-# brew update && brew upgrade && brew cleanup
+brew update && brew upgrade && brew cleanup
 
 # Tap cask-fonts
-# brew tap homebrew/cask-fonts
+brew tap homebrew/cask-fonts
 
 # Packages
 packages=(
@@ -63,9 +63,15 @@ apps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
+<<<<<<< HEAD
 # echo "Installing apps..."
 
 # brew cask install --appdir="/Applications" ${apps[@]}
+=======
+echo "Installing apps..."
+
+brew cask install --appdir="/Applications" ${apps[@]}
+>>>>>>> 3fbcf721f88f8e72c66d7d1a1cd6a0b46c8a8df6
 
 # Install packages
 echo "Installing packages..."
