@@ -1,7 +1,7 @@
 # dotfiles
 
 Run in the following order:
-- Install apps and packages
+- Install apps and packages  
 `./brew.sh`
 - Update macOS settings  
 `sudo ./bin/os_settings.sh` 
