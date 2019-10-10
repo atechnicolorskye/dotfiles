@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Update, upgrade and cleanup
-brew update && brew upgrade && brew cleanup
+brew update-reset && brew upgrade && brew cleanup
 
 # Tap cask-fonts
 brew tap homebrew/cask-fonts
@@ -21,7 +21,7 @@ packages=(
     openblas
     openssl
     pyenv
-    sed
+    gnu-sed
     sqlite
     the_silver_searcher
     tmux
@@ -35,7 +35,6 @@ apps=(
     appcleaner
     brave-browser
     caprine
-    deluge
     dropbox
     firefox
     google-backup-and-sync
@@ -43,6 +42,7 @@ apps=(
     keka
     mactex
     nvalt
+    protonvpn
     qlcolorcode
     qlimagesize
     qlmarkdown
