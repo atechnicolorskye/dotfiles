@@ -1,10 +1,10 @@
 # aliases
 alias aria="aria2c --file-allocation=none -c -x 16 -s 16 -d ~/Downloads"
 alias arte="./dotfiles/arte-downloader/arte_downloader.sh"
-lias ll="ls -al"
+alias ll="ls -al"
 alias o="open ."
 alias src="source ~/.bashrc"
-alias up="brew cask upgrade --greedy"
+alias up="brew update && brew upgrade && brew cask upgrade --greedy"
 
 # bash_completion
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
@@ -24,12 +24,12 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
  fi
 
 # sensible bash
-if [ -f ~/bin/sensible.bash ]; then
-   source ~/bin/sensible.bash
+if [ -f ~/dotfiles/bin/sensible.bash ]; then
+   source ~/dotfiles/bin/sensible.bash
 fi
 
 # bash-powerline
-source ~/bin/.bash-powerline.sh
+source ~/dotfiles/bin/.bash-powerline.sh
 
 # enable forward search
 [[ $- == *i* ]] && stty -ixon

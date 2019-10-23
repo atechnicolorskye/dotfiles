@@ -60,10 +60,21 @@ apps=(
     whatsapp
 )
 
+# Fonts
+fonts=(
+    font-hack
+    font-ia-writer-mono
+    font-ibm-plex
+    font-input
+    font-roboto-mono
+)
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps..."
+
+# Disable gatekeeper
+sudo spctl --master-dis
 
 brew cask install --appdir="/Applications" ${apps[@]}
 
@@ -73,12 +84,18 @@ echo "Installing packages..."
 brew install ${packages[@]}
 
 # Install fonts
-brew cask install font-hack font-ibm-plex font-input
+brew cask install ${fonts[@]}
 
 brew doctor
 
 # Setup Python
 echo "Setup Python."
+
+# Run pyenv
+pyenv install 3.7.5
+pyenv global 3.7.5
+
+pip install pip --upgrade
 
 # Python Packages
 python=(
@@ -95,6 +112,4 @@ python=(
 )
 
 echo "Packages to be installed:"
-echo ${python[@]}
-
-pyenv
+pip install ${python[@]}
