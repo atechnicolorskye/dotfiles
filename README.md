@@ -5,7 +5,7 @@ Run in the following order:
 `./brew.sh`
 - Update macOS settings  
 `sudo ./bin/os_settings.sh` 
-- Copy out and Install awesome vimrc  
+- Copy out and install awesome vimrc  
 `./.vim_runtime/install_awesome_vimrc.sh`
 - Switch to latest bash  
 Paste /usr/local/bin/bash in /etc/shells, then `chsh -s /usr/local/bin/bash`
