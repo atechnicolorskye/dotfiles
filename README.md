@@ -4,7 +4,7 @@ Run in the following order:
 - Install apps and packages  
 `./brew.sh`
 - Update macOS settings  
-`sudo ./bin/os_settings.sh` 
+`sudo ./dotfiles/bin/os_settings.sh` 
 - Copy out and install awesome vimrc  
 `./.vim_runtime/install_awesome_vimrc.sh`
 - Switch to latest bash  
