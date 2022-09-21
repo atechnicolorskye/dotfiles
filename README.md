@@ -8,6 +8,6 @@ Run in the following order:
 - Copy out and install awesome vimrc  
 `./.vim_runtime/install_awesome_vimrc.sh`
 - Switch to latest bash  
-Paste /usr/local/bin/bash in /etc/shells, then `chsh -s /usr/local/bin/bash`
+Paste /opt/homebrew/bin/bash in /etc/shells, then `chsh -s /opt/homebrew/bin/bash`
 - Cleanup  
 `sudo ./bin/cleanup.sh`
