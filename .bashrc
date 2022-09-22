@@ -1,3 +1,6 @@
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # aliases
 alias aria="aria2c --file-allocation=none -c -x 16 -s 16 -d ~/Downloads"
 alias arte="./dotfiles/arte-downloader/arte_downloader.sh"
@@ -6,23 +9,21 @@ alias o="open ."
 alias src="source ~/.bashrc"
 alias up="brew update && brew upgrade && brew cask upgrade --greedy"
 
+# python, use pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+ 
 # bash_completion
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
     . /usr/local/share/bash-completion/bash_completion
 fi
 
-# coreutils, curl, sed
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/usr/local/opt/curl/bin:$PATH"
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
-# python, use pyenv
- export PYENV_ROOT="$HOME/.pyenv"
- export PATH="$PYENV_ROOT/bin:$PATH"
- if command -v pyenv 1>/dev/null 2>&1; then
-   eval "$(pyenv init -)"
- fi
-
+# # coreutils, curl, sed
+# PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+# PATH="/opt/homebrew/opt/curl/bin:$PATH"
+# PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+ 
 # sensible bash
 if [ -f ~/dotfiles/bin/sensible.bash ]; then
    source ~/dotfiles/bin/sensible.bash
@@ -33,9 +34,7 @@ source ~/dotfiles/bin/.bash-powerline.sh
 
 # enable forward search
 [[ $- == *i* ]] && stty -ixon
-
+ 
 # thefuck
 eval $(thefuck --alias)
-
-# homebrew, must alawys be the LAST to run 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+ 

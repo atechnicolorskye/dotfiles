@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 
-# Update, upgrade and cleanup
-brew update-reset && brew upgrade && brew cleanup
-
-# Tap cask-fonts
+# Get fonts
 brew tap homebrew/cask-fonts
 
 # Packages
@@ -16,17 +13,21 @@ packages=(
     findutils
     gcc
     git
+    gnu-sed
     htop
     jq
     openblas
     openssl
-    pyenv
-    gnu-sed
-    sqlite
+    r
+    readline
+    sqlite3
+    tcl-tk
     the_silver_searcher
     tmux
     tree
     wget
+    xz
+    zlib
 )
 
 # Apps
@@ -36,8 +37,9 @@ apps=(
     brave-browser
     caprine
     dropbox
-    firefox
-    google-backup-and-sync
+    librewolf
+    google-chrome
+    google-drive
     iterm2
     keka
     nvalt
@@ -48,7 +50,6 @@ apps=(
     quicklook-json
     quicklook-csv
     skim
-    skype
     slack
     spectacle
     sublime-text
@@ -61,7 +62,7 @@ apps=(
 
 # Fonts
 fonts=(
-    font-ia-writer-mono
+    font-ibm-plex
 )
 
 # Install apps to /Applications
@@ -71,7 +72,7 @@ echo "Installing apps..."
 # Disable gatekeeper
 sudo spctl --master-dis
 
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --appdir="/Applications" ${apps[@]}
 
 # Install packages
 echo "Installing packages..."
@@ -79,7 +80,7 @@ echo "Installing packages..."
 brew install ${packages[@]}
 
 # Install fonts
-brew cask install ${fonts[@]}
+brew install ${fonts[@]}
 
 brew doctor
 
@@ -87,10 +88,14 @@ brew doctor
 echo "Setup Python."
 
 # Run pyenv
-pyenv install 3.7.6
-pyenv global 3.7.6
+pyenv install 3.10.6
+pyenv global 3.10.6
 
 pip install pip --upgrade
+
+# Settings for sklearn to work on Apple silicon
+export OPENBLAS=$(/opt/homebrew/bin/brew --prefix openblas)
+export CFLAGS="-falign-functions=8 ${CFLAGS}"
 
 # Python Packages
 python=(
@@ -108,3 +113,6 @@ python=(
 
 echo "Packages to be installed:"
 pip install ${python[@]}
+
+# Install thefuck
+brew install thefuck
