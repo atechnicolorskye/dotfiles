@@ -3,7 +3,7 @@
 Run in the following order:
 - Install apps and packages  
 `./brew.sh`
-- Move bashrc and profile into ~/
+- Move bashrc and profile into main folder
 `mv .bashrc .profile ../`
 - Update macOS settings  
 `sudo ./dotfiles/bin/os_settings.sh` 
