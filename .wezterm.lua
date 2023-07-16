@@ -22,7 +22,7 @@ config.font_size = 15
 config.keys = {
     { key = 'LeftArrow', mods = 'CMD|OPT', action = wezterm.action.ActivateTabRelative(-1) },
     { key = 'RightArrow', mods = 'CMD|OPT', action = wezterm.action.ActivateTabRelative(1) },
-    { key = 't', mods = 'CMD', action = wezterm.action.SpawnTab 'DefaultDomain'  },
+    { key = 't', mods = 'CMD', action = wezterm.action.SpawnTab 'DefaultDomain' },
 }
 
 
