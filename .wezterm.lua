@@ -19,10 +19,11 @@ config.enable_scroll_bar = true
 config.color_scheme = 'Spacegray Eighties (Gogh)'
 config.font = wezterm.font('IBM Plex Mono')
 config.font_size = 15
+
 config.keys = {
     { key = 'LeftArrow', mods = 'CMD|OPT', action = wezterm.action.ActivateTabRelative(-1) },
     { key = 'RightArrow', mods = 'CMD|OPT', action = wezterm.action.ActivateTabRelative(1) },
-    { key = 't', mods = 'CMD', action = wezterm.action.SpawnTab 'DefaultDomain' },
+    { key = 't', mods = 'CMD', action = wezterm.action.SpawnCommandInNewTab {cwd =  '~' }},
 }
 
 
