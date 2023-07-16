@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 
-# Get fonts
+# Get fonts and FUSE-T
 brew tap homebrew/cask-fonts
+brew tap macos-fuse-t/homebrew-cask
 
 # Packages
 packages=(
@@ -11,6 +12,8 @@ packages=(
     curl
     coreutils
     findutils
+    fuse-t
+    fuse-t-sshfs
     gcc
     git
     gnu-sed
@@ -18,7 +21,8 @@ packages=(
     jq
     openblas
     openssl
-    r
+    pyenv
+    pyenv-virtualenv
     readline
     sqlite3
     tcl-tk
@@ -36,19 +40,24 @@ apps=(
     appcleaner
     brave-browser
     caprine
+    cryptomator
+    discord
     dropbox
-    librewolf
+    firefox
     google-chrome
     google-drive
-    iterm2
     keka
+    librewolf
+    mactex
     nvalt
+    qbittorent
     qlcolorcode
     qlimagesize
     qlmarkdown
     qlstephen
     quicklook-json
     quicklook-csv
+    rstudio
     skim
     slack
     spectacle
@@ -56,13 +65,16 @@ apps=(
     suspicious-package
     texshop
     vlc
+    wezterm
     whatsapp
-    Zoom
+    windscribe
+    zoom
 )
 
 # Fonts
 fonts=(
     font-ibm-plex
+    font-blex-mono-nerd-font
 )
 
 # Install apps to /Applications
@@ -88,8 +100,8 @@ brew doctor
 echo "Setup Python."
 
 # Run pyenv
-pyenv install 3.10.6
-pyenv global 3.10.6
+pyenv install 3.11.6
+pyenv global 3.11.6
 
 pip install pip --upgrade
 
@@ -101,6 +113,7 @@ export CFLAGS="-falign-functions=8 ${CFLAGS}"
 python=(
     ipython
     jupyter
+    jupyterlab
     numpy
     matplotlib
     seaborn
