@@ -7,16 +7,19 @@ alias arte="./dotfiles/arte-downloader/arte_downloader.sh"
 alias ll="ls -al"
 alias o="open ."
 alias src="source ~/.bashrc"
-alias up="brew update && brew upgrade && brew cask upgrade --greedy"
+alias up="brew update && brew upgrade --greedy --no-quarantine"
 
 # python, use pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
- 
+
+# java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
+
 # bash_completion
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-    . /usr/local/share/bash-completion/bash_completion
+if [ -f /opt/homebrew/bin/bash-completion/bash_completion ]; then
+    . /opt/homebrew/bin/bash-completion/bash_completion
 fi
 
 # # coreutils, curl, sed
