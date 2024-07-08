@@ -1,5 +1,9 @@
 # homebrew
+# M-series
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# Intel
+# eval "$(/usr/local/bin/brew shellenv)"
+
 
 # aliases
 alias aria="aria2c --file-allocation=none -c -x 16 -s 16 -d ~/Downloads"
@@ -14,13 +18,15 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
-
 # bash_completion
+# M-series
 if [ -f /opt/homebrew/bin/bash-completion/bash_completion ]; then
     . /opt/homebrew/bin/bash-completion/bash_completion
 fi
+# Intel
+# if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+#     . /usr/local/share/bash-completion/bash_completion
+# fi
 
 # # coreutils, curl, sed
 # PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
