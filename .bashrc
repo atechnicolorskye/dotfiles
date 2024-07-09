@@ -1,8 +1,8 @@
 # homebrew
 # M-series
-# eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # Intel
-eval "$(/usr/local/bin/brew shellenv)"
+# eval "$(/usr/local/bin/brew shellenv)"
 
 
 # aliases
@@ -20,13 +20,13 @@ eval "$(pyenv init -)"
 
 # bash_completion
 # M-series
-# if [ -f /opt/homebrew/bin/bash-completion/bash_completion ]; then
-#     . /opt/homebrew/bin/bash-completion/bash_completion
-# fi
-# Intel
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-    . /usr/local/share/bash-completion/bash_completion
+if [ -f /opt/homebrew/bin/bash-completion/bash_completion ]; then
+    . /opt/homebrew/bin/bash-completion/bash_completion
 fi
+# Intel
+# if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+#     . /usr/local/share/bash-completion/bash_completion
+# fi
 
 # # coreutils, curl, sed
 # PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"

@@ -6,7 +6,7 @@ set clipboard=unnamed
 
 " Enable termguicolors for base16-vim to work
 set termguicolors
-" Change colorscheme
+" Change colorscheme (git clone https://github.com/chriskempson/base16-vim.git in my_plugins)
 colorscheme base16-tomorrow-night-eighties
 
 " ag
