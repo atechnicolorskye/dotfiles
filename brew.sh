@@ -21,14 +21,13 @@ packages=(
     jq
     openblas
     openssl
-    pyenv
-    pyenv-virtualenv
     readline
     sqlite3
     tcl-tk
     the_silver_searcher
     tmux
     tree
+    uv
     wget
     xz
     zlib
@@ -49,7 +48,7 @@ apps=(
     keka
     librewolf
     mactex
-    nvalt
+    obsidian
     qbittorent
     qlcolorcode
     qlimagesize
@@ -57,10 +56,10 @@ apps=(
     qlstephen
     quicklook-json
     quicklook-csv
+    rectangle
     rstudio
     skim
     slack
-    spectacle
     sublime-text
     suspicious-package
     texshop
@@ -99,33 +98,15 @@ brew doctor
 # Setup Python
 echo "Setup Python."
 
-# Run pyenv
-pyenv install 3.11.6
-pyenv global 3.11.6
-
-pip install pip --upgrade
+# Run uv
+uv python install --default
 
 # Settings for sklearn to work on Apple silicon
 export OPENBLAS=$(/opt/homebrew/bin/brew --prefix openblas)
 export CFLAGS="-falign-functions=8 ${CFLAGS}"
 
-# Python Packages
-python=(
-    ipython
-    jupyter
-    jupyterlab
-    numpy
-    matplotlib
-    seaborn
-    scipy
-    sklearn
-    tensorflow
-    torch
-    torchvision
-)
-
 echo "Packages to be installed:"
-pip install ${python[@]}
+uv pip install -r requirements.txt
 
 # Install thefuck
 brew install thefuck
