@@ -45,6 +45,7 @@ apps=(
     firefox
     google-chrome
     google-drive
+    keepassxc
     keka
     librewolf
     mactex
@@ -72,7 +73,7 @@ apps=(
 
 # Fonts
 fonts=(
-    font-ibm-plex
+    font-ibm-plex-mono
     font-blex-mono-nerd-font
 )
 
